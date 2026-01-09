@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoorDash - Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>DoorDash</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Delicious Food, Delivered Fast</h2>
+            <p>Order from your favorite restaurants and get it at your door.</p>
+            <button onclick="location.href='#order'">Order Now</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Why DoorDash?</h2>
+        <div class="feature-columns">
+            <div class="feature-box">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="Fast Delivery Truck">
+                <h3>Fast Delivery</h3>
+                <p>Get your food in under 30 minutes.</p>
+            </div>
+            <div class="feature-box">
+                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300"
+                    alt="Wide Selection Menu">
+                <h3>Wide Selection</h3>
+                <p>Thousands of restaurants to choose from.</p>
+            </div>
+            <div class="feature-box">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                    alt="Easy Tracking App">
+                <h3>Easy Tracking</h3>
+                <p>Real-time updates on your order.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <p class="menu-intro">Popular dishes with descriptions and prices.</p>
+        <div class="menu-grid">
+            <article class="menu-item">
+                <h3>Margherita Pizza</h3>
+                <p>Classic tomato, fresh mozzarella, basil. <strong>₹399</strong></p>
+                <button class="add">Add to Order</button>
+            </article>
+
+            <article class="menu-item">
+                <h3>Sushi Platter</h3>
+                <p>Assorted nigiri and rolls. <strong>₹799</strong></p>
+                <button class="add">Add to Order</button>
+            </article>
+
+            <article class="menu-item">
+                <h3>Burger Combo</h3>
+                <p>Beef patty, cheese, fries. <strong>₹499</strong></p>
+                <button class="add">Add to Order</button>
+            </article>
+
+            <article class="menu-item">
+                <h3>Vegan Bowl</h3>
+                <p>Quinoa, roasted veggies, tahini. <strong>₹349</strong></p>
+                <button class="add">Add to Order</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <h2>Place an Order</h2>
+        <form class="form" action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+
+            <label for="address">Delivery Address</label>
+            <input id="address" name="address" type="text" placeholder="Street, city, zip" required>
+
+            <label for="items">Items</label>
+            <input id="items" name="items" type="text" placeholder="e.g. Margherita Pizza x1" required>
+
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Any special instructions"></textarea>
+
+            <button type="submit" class="primary">Submit Order</button>
+        </form>
+    </section>
+
+    <!-- Register / Enquiry Section -->
+    <section id="register" class="register-section">
+        <h2>Register / Enquiry</h2>
+        <form class="form" action="#" method="post">
+            <label for="rname">Full Name</label>
+            <input id="rname" name="rname" type="text" placeholder="Full name" required>
+
+            <label for="remail">Email</label>
+            <input id="remail" name="remail" type="email" placeholder="you@example.com" required>
+
+            <label for="enquiry">Enquiry</label>
+            <textarea id="enquiry" name="enquiry" placeholder="Questions or details"></textarea>
+
+            <button type="submit" class="primary">Register / Send Enquiry</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <h2>Find Us</h2>
+        <p class="map-instructions">Click the button to show your current location on the map (browser permission
+            required), or enter an address.</p>
+        <div class="map-controls">
+            <button id="locateBtn" class="primary">Show My Location</button>
+            <input id="manualAddr" placeholder="Or enter address to show on map">
+            <button id="addrBtn">Show Address</button>
+        </div>
+        <div class="map-container">
+            <iframe id="mapIframe" src="https://www.google.com/maps?q=New+Delhi&output=embed" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback" class="feedback-section">
+        <h2>Feedback</h2>
+        <form class="form" action="#" method="post">
+            <label for="fname">Name</label>
+            <input id="fname" name="fname" type="text" placeholder="Your name">
+
+            <label for="femail">Email</label>
+            <input id="femail" name="femail" type="email" placeholder="you@example.com">
+
+            <label>Rating</label>
+            <div class="rating">
+                <label><input type="radio" name="rating" value="5">5</label>
+                <label><input type="radio" name="rating" value="4">4</label>
+                <label><input type="radio" name="rating" value="3">3</label>
+                <label><input type="radio" name="rating" value="2">2</label>
+                <label><input type="radio" name="rating" value="1">1</label>
+            </div>
+
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="fmessage" placeholder="Share your thoughts"></textarea>
+
+            <button type="submit" class="primary">Send Feedback</button>
+        </form>
+    </section>
+
+    <script>
+        // Map helpers: use geolocation to update iframe
+        const locateBtn = document.getElementById('locateBtn');
+        const addrBtn = document.getElementById('addrBtn');
+        const manualAddr = document.getElementById('manualAddr');
+        const mapIframe = document.getElementById('mapIframe');
+
+        locateBtn && locateBtn.addEventListener('click', () => {
+            if (!navigator.geolocation) return alert('Geolocation not supported');
+            navigator.geolocation.getCurrentPosition((pos) => {
+                const lat = pos.coords.latitude.toFixed(6);
+                const lng = pos.coords.longitude.toFixed(6);
+                mapIframe.src = `https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
+            }, (err) => alert('Unable to get location: ' + err.message));
+        });
+
+        addrBtn && addrBtn.addEventListener('click', () => {
+            const q = manualAddr.value.trim();
+            if (!q) return alert('Enter an address');
+            mapIframe.src = `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed`;
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Download the app or contact us at support@doordash.com</p>
+        <p>&copy; DoorDash- Priti Kumari Kanu.</p>
+    </footer>
+</body>
+
+</html>
